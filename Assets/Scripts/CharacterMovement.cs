@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-	private Rigidbody rigidbody;
-	private Input input;
+    private Rigidbody rigidbody;
+    private Input input;
 
     public float jumpForce;
 
     public Transform planet;
+    public Transform feet;
 
     //public Transform CameraHolder;
 
@@ -20,19 +21,29 @@ public class CharacterMovement : MonoBehaviour
 
     private Vector3 moveAmount;
     Vector3 smoothMoveVelocity;
-    private LayerMask groundedMask;
-    private bool grounded;
+    public LayerMask groundMask;
+    private bool isGrounded;
 
     CharacterController characterController;
     private void Awake()
     {
-		rigidbody = GetComponent<Rigidbody>();
+        rigidbody = GetComponent<Rigidbody>();
         input = GetComponent<Input>();
     }
 
-
     private void FixedUpdate()
-	{
+    {
+        Ray ray = new Ray(feet.position + transform.up * 0.05f, -transform.up);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, 0.1f, groundMask))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
+
         Vector3 moveDir = new Vector3(input._movementInput.x, 0, input._movementInput.y);
         Vector3 targetMoveAmount = moveDir;
         moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
@@ -40,22 +51,15 @@ public class CharacterMovement : MonoBehaviour
         Vector3 localMove = transform.TransformDirection(moveAmount) * _movementSpeed * Time.deltaTime;
         rigidbody.MovePosition(rigidbody.position + localMove);
 
-        Ray ray = new Ray(transform.position, -transform.up);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, 1 + .1f, groundedMask))
-        {
-            grounded = true;
-        }
-        else
-        {
-            grounded = false;
-        }
 
     }
 
     public void Jump()
     {
-        rigidbody.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);
+        if (isGrounded)
+        {
+            rigidbody.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);
+        }
+
     }
 }
