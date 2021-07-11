@@ -6,31 +6,38 @@ using UnityEngine.InputSystem;
 
 public class Input : MonoBehaviour
 {
-    private DefaultInput _defaultInput;
+    [HideInInspector] public DefaultInput _defaultInput;
     [HideInInspector] public Vector2 _movementInput;
     [HideInInspector] public Vector2 _viewInput;
 
     private CharacterMovement characterMovement;
 
-    private void Start()
+    private void Awake()
     {
         BindInput();
 
         characterMovement = GetComponent<CharacterMovement>();
     }
 
+    private void OnEnable()
+    {
+        _defaultInput.Enable();
+
+    }
+
+    private void OnDisable()
+    {
+        _defaultInput.Disable();
+
+    }
+
     private void BindInput()
     {
         _defaultInput = new DefaultInput();
-        _defaultInput.Character.Movement.performed += e => _movementInput = e.ReadValue<Vector2>();
         _defaultInput.Character.View.performed += e => _viewInput = e.ReadValue<Vector2>();
-        _defaultInput.Character.Jump.performed += e => Jump();
 
         _defaultInput.Items.Equip.performed += PickUp;
 
-
-
-        _defaultInput.Enable();
     }
 
     private void PickUp(InputAction.CallbackContext obj)

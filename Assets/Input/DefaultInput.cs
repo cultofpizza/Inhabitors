@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/DefaultInput.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Input/DefaultInput.inputactions'
 
 using System;
 using System.Collections;
@@ -41,6 +41,14 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""SwitchCharacter"",
+                    ""type"": ""Button"",
+                    ""id"": ""870258a1-908b-4753-afab-240685510609"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -60,7 +68,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""id"": ""726d46de-db4c-4cee-8508-cb5f288b0c5b"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""ScaleVector2(x=50,y=50)"",
                     ""groups"": """",
                     ""action"": ""View"",
                     ""isComposite"": false,
@@ -151,6 +159,28 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""94275844-74ff-46be-aaea-e611b62e214a"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchCharacter"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f89d3eb7-aae6-4c6e-9890-844f9175c955"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchCharacter"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -305,6 +335,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
         m_Character_Movement = m_Character.FindAction("Movement", throwIfNotFound: true);
         m_Character_View = m_Character.FindAction("View", throwIfNotFound: true);
         m_Character_Jump = m_Character.FindAction("Jump", throwIfNotFound: true);
+        m_Character_SwitchCharacter = m_Character.FindAction("SwitchCharacter", throwIfNotFound: true);
         // Items
         m_Items = asset.FindActionMap("Items", throwIfNotFound: true);
         m_Items_Equip = m_Items.FindAction("Equip", throwIfNotFound: true);
@@ -366,6 +397,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Character_Movement;
     private readonly InputAction m_Character_View;
     private readonly InputAction m_Character_Jump;
+    private readonly InputAction m_Character_SwitchCharacter;
     public struct CharacterActions
     {
         private @DefaultInput m_Wrapper;
@@ -373,6 +405,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
         public InputAction @Movement => m_Wrapper.m_Character_Movement;
         public InputAction @View => m_Wrapper.m_Character_View;
         public InputAction @Jump => m_Wrapper.m_Character_Jump;
+        public InputAction @SwitchCharacter => m_Wrapper.m_Character_SwitchCharacter;
         public InputActionMap Get() { return m_Wrapper.m_Character; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -391,6 +424,9 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnJump;
+                @SwitchCharacter.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnSwitchCharacter;
+                @SwitchCharacter.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnSwitchCharacter;
+                @SwitchCharacter.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnSwitchCharacter;
             }
             m_Wrapper.m_CharacterActionsCallbackInterface = instance;
             if (instance != null)
@@ -404,6 +440,9 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @SwitchCharacter.started += instance.OnSwitchCharacter;
+                @SwitchCharacter.performed += instance.OnSwitchCharacter;
+                @SwitchCharacter.canceled += instance.OnSwitchCharacter;
             }
         }
     }
@@ -494,6 +533,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnView(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnSwitchCharacter(InputAction.CallbackContext context);
     }
     public interface IItemsActions
     {

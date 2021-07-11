@@ -34,21 +34,41 @@ public class CharacterView : MonoBehaviour
     [MinMaxSlider(-90f, 90f)]
     [SerializeField] private Vector2 _viewClamp;
 
-    private Input input;
-    private Rigidbody rigidbody;
-    //private CharacterMovement characterMovement;
+    private Rigidbody _rigidbody;
 
-    private void Start()
+    private DefaultInput _defaultInput;
+    private Vector2 _viewInput;
+
+    private void Awake()
     {
-        input = GetComponent<Input>();
-        rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();
 
-
-        //characterMovement = GetComponent<CharacterMovement>();
         _cameraRotation = CameraHolder.localRotation.eulerAngles;
         _cameraRotation = transform.localRotation.eulerAngles;
 
+        _defaultInput = new DefaultInput();
+        BindInput();
     }
+
+    private void BindInput()
+    {
+        _defaultInput.Character.View.performed += e => _viewInput = e.ReadValue<Vector2>();
+
+
+    }
+
+    private void OnEnable()
+    {
+        _defaultInput.Enable();
+    }
+
+    private void OnDisable()
+    {
+        _defaultInput.Disable();
+
+        _viewInput = Vector3.zero;
+    }
+
     private void Update()
     {
         CalculateView();
@@ -73,12 +93,12 @@ public class CharacterView : MonoBehaviour
 
         //transform.Rotate((Vector3.up * Sensetivity * input._viewInput.x));
 
-        Vector3 angle = Vector3.up * Sensetivity * input._viewInput.x;
+        Vector3 angle = Vector3.up * Sensetivity * _viewInput.x;
 
         Quaternion deltaRotation = Quaternion.Euler(angle * Time.deltaTime);
-        rigidbody.MoveRotation(rigidbody.rotation * deltaRotation);
+        _rigidbody.MoveRotation(_rigidbody.rotation * deltaRotation);
 
-        _cameraRotation.x += Sensetivity * (ViewYInvetred ? -input._viewInput.y : input._viewInput.y) * Time.deltaTime;
+        _cameraRotation.x += Sensetivity * (ViewYInvetred ? -_viewInput.y : _viewInput.y) * Time.deltaTime;
         _cameraRotation.x = Mathf.Clamp(_cameraRotation.x, _viewClamp.x, _viewClamp.y);
         CameraHolder.localEulerAngles = Vector3.left * _cameraRotation.x;
     }

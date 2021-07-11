@@ -22,6 +22,11 @@ public class DisplayInventory : MonoBehaviour
 
     public void CreateSlots()
     {
+        new Dictionary<InventorySlot, GameObject>();
+
+
+
+
         cells = inventoryPanel.GetComponentsInChildren<InventoryCell>();
 
         for (int i = 0; i < inventory.Container.Items.Count; i++)
