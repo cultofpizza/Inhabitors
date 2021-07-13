@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MLAPI;
 
-public class CharacterMovement : MonoBehaviour
+public class CharacterMovement : NetworkBehaviour
 {
     private Rigidbody rigidbody;
 
@@ -25,8 +26,8 @@ public class CharacterMovement : MonoBehaviour
     Vector3 smoothMoveVelocity;
     public LayerMask _groundMask;
     private bool isGrounded;
-    [SerializeField]
-    private bool IsGrounded
+
+    [SerializeField] private bool IsGrounded
     {
         get { return Physics.CheckSphere(_feet.position + Vector3.up * (_feetRadius - 0.05f), _feetRadius, _groundMask); }
     }
@@ -42,6 +43,8 @@ public class CharacterMovement : MonoBehaviour
         _defaultInput = new DefaultInput();
         BindInput();
     }
+
+
 
     private void BindInput()
     {

@@ -16,6 +16,8 @@ public class DisplayInventory : MonoBehaviour
 
     private void Start()
     {
+        inventoryPanel = GameObject.FindGameObjectWithTag("InventoryPanel");
+
         CreateSlots();
         inventory.Refresh += UpdateDisplay;
     }

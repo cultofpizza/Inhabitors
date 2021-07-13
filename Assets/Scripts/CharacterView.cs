@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GD.MinMaxSlider;
 
 public class CharacterView : MonoBehaviour
 {
@@ -31,7 +30,6 @@ public class CharacterView : MonoBehaviour
 
 
 
-    [MinMaxSlider(-90f, 90f)]
     [SerializeField] private Vector2 _viewClamp;
 
     private Rigidbody _rigidbody;
@@ -50,11 +48,14 @@ public class CharacterView : MonoBehaviour
         BindInput();
     }
 
+    private void Start()
+    {
+        
+    }
+
     private void BindInput()
     {
         _defaultInput.Character.View.performed += e => _viewInput = e.ReadValue<Vector2>();
-
-
     }
 
     private void OnEnable()
