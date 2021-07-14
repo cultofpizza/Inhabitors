@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterView : MonoBehaviour
 {
     public Transform CameraHolder;
-    public Transform planet;
+    public CharacterMesh mesh;
 
     public float sensetivity;
     public float Sensetivity
@@ -46,11 +46,9 @@ public class CharacterView : MonoBehaviour
 
         _defaultInput = new DefaultInput();
         BindInput();
-    }
 
-    private void Start()
-    {
-        
+        mesh = GetComponentInChildren<CharacterMesh>();
+        mesh.gameObject.SetActive(false);
     }
 
     private void BindInput()

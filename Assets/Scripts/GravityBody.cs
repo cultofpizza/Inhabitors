@@ -22,6 +22,11 @@ public class GravityBody : MonoBehaviour
         {
             rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
         }
+        else
+        {
+            rigidbody.constraints = RigidbodyConstraints.None;
+
+        }
 
     }
 

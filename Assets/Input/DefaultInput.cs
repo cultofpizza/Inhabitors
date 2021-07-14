@@ -58,7 +58,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Mouse and Keyboard"",
                     ""action"": ""View"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -69,14 +69,25 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": ""ScaleVector2(x=50,y=50)"",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""View"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": """",
+                    ""id"": ""f0466fcf-0c92-40e8-b71d-e3d30d72526a"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""WASD"",
-                    ""id"": ""7dec039a-55a0-4e51-bf88-5beee851b307"",
+                    ""id"": ""1b7b6ae2-dd2b-4eed-b649-5dd3adedf5bc"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -87,58 +98,47 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""296fa0fe-955d-4340-aeb5-c86dffe50b8b"",
+                    ""id"": ""8e191c65-11c3-4ea1-8a0c-8770944ec9f4"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Mouse and Keyboard"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""b2d52b40-f8ca-4d04-a5b4-974b81d487e6"",
+                    ""id"": ""2889c970-ebb8-4f13-a006-a226732a7e02"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Mouse and Keyboard"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""d88a65d3-3e7d-4acf-9f6b-1f69ab7daa45"",
+                    ""id"": ""1a4409b3-2d35-4cf7-8690-3a2643293791"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Mouse and Keyboard"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""77a85e12-2199-4f45-ad21-82e7b7e0b445"",
+                    ""id"": ""57e73cae-8bec-42f1-8a60-40d71ec0fc9a"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Mouse and Keyboard"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f0466fcf-0c92-40e8-b71d-e3d30d72526a"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
@@ -146,7 +146,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Mouse and Keyboard"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -157,7 +157,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -168,7 +168,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Mouse and Keyboard"",
                     ""action"": ""SwitchCharacter"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -179,7 +179,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""SwitchCharacter"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -191,7 +191,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
             ""id"": ""f23f2974-a9f8-44c0-a159-f512254e1ca1"",
             ""actions"": [
                 {
-                    ""name"": ""Equip"",
+                    ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""7d380064-1020-4eec-973b-0eff7bfd2a41"",
                     ""expectedControlType"": ""Button"",
@@ -215,30 +215,6 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""PrimaryWeapon"",
-                    ""type"": ""Button"",
-                    ""id"": ""90e92b46-3404-4bc7-8975-8a389180d1b5"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""SecondaryWeapon"",
-                    ""type"": ""Button"",
-                    ""id"": ""0218e10d-3873-43a8-978f-9600fd1442e4"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Melee"",
-                    ""type"": ""Button"",
-                    ""id"": ""093103fb-3463-4adf-8868-f8ddcdee348e"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""Drop"",
                     ""type"": ""Button"",
                     ""id"": ""83da609b-4676-45a0-97a5-44995b951a46"",
@@ -254,8 +230,8 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Equip"",
+                    ""groups"": ""Mouse and Keyboard"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -265,41 +241,8 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Mouse and Keyboard"",
                     ""action"": ""Use"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e9aac905-e3d8-40e0-b54b-ccb86d077ca9"",
-                    ""path"": ""<Keyboard>/1"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""PrimaryWeapon"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b250c66d-e211-401d-b23f-c01247b70d09"",
-                    ""path"": ""<Keyboard>/2"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SecondaryWeapon"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5731722a-b3a6-46c5-b08f-b91c386e3fa0"",
-                    ""path"": ""<Keyboard>/3"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Melee"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -309,7 +252,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/g"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Mouse and Keyboard"",
                     ""action"": ""Drop"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -320,7 +263,7 @@ public class @DefaultInput : IInputActionCollection, IDisposable
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Mouse and Keyboard"",
                     ""action"": ""Alternative"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -328,7 +271,35 @@ public class @DefaultInput : IInputActionCollection, IDisposable
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Mouse and Keyboard"",
+            ""bindingGroup"": ""Mouse and Keyboard"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Gamepad"",
+            ""bindingGroup"": ""Gamepad"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // Character
         m_Character = asset.FindActionMap("Character", throwIfNotFound: true);
@@ -338,12 +309,9 @@ public class @DefaultInput : IInputActionCollection, IDisposable
         m_Character_SwitchCharacter = m_Character.FindAction("SwitchCharacter", throwIfNotFound: true);
         // Items
         m_Items = asset.FindActionMap("Items", throwIfNotFound: true);
-        m_Items_Equip = m_Items.FindAction("Equip", throwIfNotFound: true);
+        m_Items_Interact = m_Items.FindAction("Interact", throwIfNotFound: true);
         m_Items_Use = m_Items.FindAction("Use", throwIfNotFound: true);
         m_Items_Alternative = m_Items.FindAction("Alternative", throwIfNotFound: true);
-        m_Items_PrimaryWeapon = m_Items.FindAction("PrimaryWeapon", throwIfNotFound: true);
-        m_Items_SecondaryWeapon = m_Items.FindAction("SecondaryWeapon", throwIfNotFound: true);
-        m_Items_Melee = m_Items.FindAction("Melee", throwIfNotFound: true);
         m_Items_Drop = m_Items.FindAction("Drop", throwIfNotFound: true);
     }
 
@@ -451,23 +419,17 @@ public class @DefaultInput : IInputActionCollection, IDisposable
     // Items
     private readonly InputActionMap m_Items;
     private IItemsActions m_ItemsActionsCallbackInterface;
-    private readonly InputAction m_Items_Equip;
+    private readonly InputAction m_Items_Interact;
     private readonly InputAction m_Items_Use;
     private readonly InputAction m_Items_Alternative;
-    private readonly InputAction m_Items_PrimaryWeapon;
-    private readonly InputAction m_Items_SecondaryWeapon;
-    private readonly InputAction m_Items_Melee;
     private readonly InputAction m_Items_Drop;
     public struct ItemsActions
     {
         private @DefaultInput m_Wrapper;
         public ItemsActions(@DefaultInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Equip => m_Wrapper.m_Items_Equip;
+        public InputAction @Interact => m_Wrapper.m_Items_Interact;
         public InputAction @Use => m_Wrapper.m_Items_Use;
         public InputAction @Alternative => m_Wrapper.m_Items_Alternative;
-        public InputAction @PrimaryWeapon => m_Wrapper.m_Items_PrimaryWeapon;
-        public InputAction @SecondaryWeapon => m_Wrapper.m_Items_SecondaryWeapon;
-        public InputAction @Melee => m_Wrapper.m_Items_Melee;
         public InputAction @Drop => m_Wrapper.m_Items_Drop;
         public InputActionMap Get() { return m_Wrapper.m_Items; }
         public void Enable() { Get().Enable(); }
@@ -478,24 +440,15 @@ public class @DefaultInput : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_ItemsActionsCallbackInterface != null)
             {
-                @Equip.started -= m_Wrapper.m_ItemsActionsCallbackInterface.OnEquip;
-                @Equip.performed -= m_Wrapper.m_ItemsActionsCallbackInterface.OnEquip;
-                @Equip.canceled -= m_Wrapper.m_ItemsActionsCallbackInterface.OnEquip;
+                @Interact.started -= m_Wrapper.m_ItemsActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_ItemsActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_ItemsActionsCallbackInterface.OnInteract;
                 @Use.started -= m_Wrapper.m_ItemsActionsCallbackInterface.OnUse;
                 @Use.performed -= m_Wrapper.m_ItemsActionsCallbackInterface.OnUse;
                 @Use.canceled -= m_Wrapper.m_ItemsActionsCallbackInterface.OnUse;
                 @Alternative.started -= m_Wrapper.m_ItemsActionsCallbackInterface.OnAlternative;
                 @Alternative.performed -= m_Wrapper.m_ItemsActionsCallbackInterface.OnAlternative;
                 @Alternative.canceled -= m_Wrapper.m_ItemsActionsCallbackInterface.OnAlternative;
-                @PrimaryWeapon.started -= m_Wrapper.m_ItemsActionsCallbackInterface.OnPrimaryWeapon;
-                @PrimaryWeapon.performed -= m_Wrapper.m_ItemsActionsCallbackInterface.OnPrimaryWeapon;
-                @PrimaryWeapon.canceled -= m_Wrapper.m_ItemsActionsCallbackInterface.OnPrimaryWeapon;
-                @SecondaryWeapon.started -= m_Wrapper.m_ItemsActionsCallbackInterface.OnSecondaryWeapon;
-                @SecondaryWeapon.performed -= m_Wrapper.m_ItemsActionsCallbackInterface.OnSecondaryWeapon;
-                @SecondaryWeapon.canceled -= m_Wrapper.m_ItemsActionsCallbackInterface.OnSecondaryWeapon;
-                @Melee.started -= m_Wrapper.m_ItemsActionsCallbackInterface.OnMelee;
-                @Melee.performed -= m_Wrapper.m_ItemsActionsCallbackInterface.OnMelee;
-                @Melee.canceled -= m_Wrapper.m_ItemsActionsCallbackInterface.OnMelee;
                 @Drop.started -= m_Wrapper.m_ItemsActionsCallbackInterface.OnDrop;
                 @Drop.performed -= m_Wrapper.m_ItemsActionsCallbackInterface.OnDrop;
                 @Drop.canceled -= m_Wrapper.m_ItemsActionsCallbackInterface.OnDrop;
@@ -503,24 +456,15 @@ public class @DefaultInput : IInputActionCollection, IDisposable
             m_Wrapper.m_ItemsActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Equip.started += instance.OnEquip;
-                @Equip.performed += instance.OnEquip;
-                @Equip.canceled += instance.OnEquip;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
                 @Use.started += instance.OnUse;
                 @Use.performed += instance.OnUse;
                 @Use.canceled += instance.OnUse;
                 @Alternative.started += instance.OnAlternative;
                 @Alternative.performed += instance.OnAlternative;
                 @Alternative.canceled += instance.OnAlternative;
-                @PrimaryWeapon.started += instance.OnPrimaryWeapon;
-                @PrimaryWeapon.performed += instance.OnPrimaryWeapon;
-                @PrimaryWeapon.canceled += instance.OnPrimaryWeapon;
-                @SecondaryWeapon.started += instance.OnSecondaryWeapon;
-                @SecondaryWeapon.performed += instance.OnSecondaryWeapon;
-                @SecondaryWeapon.canceled += instance.OnSecondaryWeapon;
-                @Melee.started += instance.OnMelee;
-                @Melee.performed += instance.OnMelee;
-                @Melee.canceled += instance.OnMelee;
                 @Drop.started += instance.OnDrop;
                 @Drop.performed += instance.OnDrop;
                 @Drop.canceled += instance.OnDrop;
@@ -528,6 +472,24 @@ public class @DefaultInput : IInputActionCollection, IDisposable
         }
     }
     public ItemsActions @Items => new ItemsActions(this);
+    private int m_MouseandKeyboardSchemeIndex = -1;
+    public InputControlScheme MouseandKeyboardScheme
+    {
+        get
+        {
+            if (m_MouseandKeyboardSchemeIndex == -1) m_MouseandKeyboardSchemeIndex = asset.FindControlSchemeIndex("Mouse and Keyboard");
+            return asset.controlSchemes[m_MouseandKeyboardSchemeIndex];
+        }
+    }
+    private int m_GamepadSchemeIndex = -1;
+    public InputControlScheme GamepadScheme
+    {
+        get
+        {
+            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
+            return asset.controlSchemes[m_GamepadSchemeIndex];
+        }
+    }
     public interface ICharacterActions
     {
         void OnMovement(InputAction.CallbackContext context);
@@ -537,12 +499,9 @@ public class @DefaultInput : IInputActionCollection, IDisposable
     }
     public interface IItemsActions
     {
-        void OnEquip(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
         void OnUse(InputAction.CallbackContext context);
         void OnAlternative(InputAction.CallbackContext context);
-        void OnPrimaryWeapon(InputAction.CallbackContext context);
-        void OnSecondaryWeapon(InputAction.CallbackContext context);
-        void OnMelee(InputAction.CallbackContext context);
         void OnDrop(InputAction.CallbackContext context);
     }
 }

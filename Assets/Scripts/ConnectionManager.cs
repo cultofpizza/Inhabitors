@@ -51,9 +51,11 @@ public class ConnectionManager : MonoBehaviour
     {
         Debug.Log("Joining...");
         transport = NetworkManager.Singleton.GetComponent<UNetTransport>();
+
         transport.ConnectAddress = ipInputField.text;
 
         transport.ConnectPort = port;
+        transport.ServerListenPort = port;
 
         NetworkManager.Singleton.NetworkConfig.ConnectionData = System.Text.Encoding.ASCII.GetBytes("MyPassword");
         NetworkManager.Singleton.StartClient();
@@ -66,6 +68,11 @@ public class ConnectionManager : MonoBehaviour
     {
         NetworkSceneManager.OnSceneSwitched += SpawnPlayer;
         NetworkSceneManager.SwitchScene("WorkInProgressScene");
+
+        foreach (var item in NetworkManager.Singleton.ConnectedClients.Keys)
+        {
+            Debug.Log(item);
+        }
     }
 
     private void SpawnPlayer()

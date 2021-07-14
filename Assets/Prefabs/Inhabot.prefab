@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraHolder: {fileID: 5697155355857003772}
-  planet: {fileID: 0}
+  mesh: {fileID: 0}
   sensetivity: 4
   ViewYInvetred: 0
   _viewClamp: {x: -80, y: 80}

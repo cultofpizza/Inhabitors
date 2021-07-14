@@ -26,7 +26,6 @@ public class NetCharacter : NetworkBehaviour
 
     private void Start()
     {
-
         if (IsLocalPlayer)
         {
             gravityBody = gameObject.AddComponent<GravityBody>();

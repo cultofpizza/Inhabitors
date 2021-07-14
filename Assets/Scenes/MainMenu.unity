@@ -1329,7 +1329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DontDestroy: 1
   RunInBackground: 1
-  LogLevel: 0
+  LogLevel: 2
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 197238741}
@@ -1400,8 +1400,8 @@ MonoBehaviour:
   MaxConnections: 100
   MaxSentMessageQueueSize: 128
   ConnectAddress: 127.0.0.1
-  ConnectPort: 7777
-  ServerListenPort: 7777
+  ConnectPort: 1741
+  ServerListenPort: 1741
   ServerWebsocketListenPort: 8887
   SupportWebsocket: 0
   Channels: []
@@ -5843,7 +5843,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 937880286}
   m_HandleRect: {fileID: 937880285}
   m_Direction: 2
-  m_Value: 0.99999964
+  m_Value: 1.0000001
   m_Size: 0.54807496
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -6971,6 +6971,8 @@ MonoBehaviour:
   hostPanel: {fileID: 55104116}
   joinPanel: {fileID: 1267933025}
   prefab: {fileID: 5697155355910971004, guid: 5cef09dc132a69546976ae644e33417b, type: 3}
+  ipInputField: {fileID: 410232106}
+  port: 1741
 --- !u!4 &1334412627
 Transform:
   m_ObjectHideFlags: 0
